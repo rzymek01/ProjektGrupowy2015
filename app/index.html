@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- build:[ng-strict-di]:dist ng-strict-di-->
+<html dir="ltr" lang="en-US" class="no-js">
+<!-- /build -->
+<head>
+    <meta charset="utf-8">
+    <title>Projekt Grupowy 2015 - aplikacja demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <base href="/">
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <script src="bower_components/core.js/client/core.js"></script>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/requirejs/require.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/scripts.js -->
+    <!-- injector:js -->
+    <!-- endinjector -->
+    <script>
+        require(['app.module'], function () {
+            //this will kick off the application
+        });
+    </script>
+    <!-- endbuild -->
+</head>
+<body>
+    <main ui-view="content" autoscroll="true"></main>
+</body>
+</html>
