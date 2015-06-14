@@ -13,11 +13,18 @@ describe('Controller: LoginController', () => {
 
     beforeEach(inject($controller => {
         loginController = $controller('LoginController', {
-            $state: jasmine.createSpy('$state')
+            $state: jasmine.createSpy('$state'),
+            $scope: jasmine.createSpy('$scope')
         });
     }));
 
     it('should have login method', () => {
         expect(loginController.login).toEqual(jasmine.any(Function));
+    });
+    it('check login method', () => {
+        var someNick = 'test';
+        loginController.$scope.nick = someNick;
+        loginController.login();
+        expect(loginController.$scope.nick2).toEqual(someNick);
     });
 });
