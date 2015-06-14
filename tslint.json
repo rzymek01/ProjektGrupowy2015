@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "variable-name": true,
+    "quotemark": [true, "single"]
+  }
+}

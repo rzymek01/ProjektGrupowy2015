@@ -37,7 +37,9 @@
     "load-grunt-tasks": "^3.1.0",
     "phantomjs": "^1.9.17",
     "time-grunt": "^1.0.0",
-    "typescript": "^1.5.0-beta"
+    "typescript": "^1.5.0-beta",
+    "tslint": "~2.0.0",
+    "grunt-tslint": "~2.0.0"
   },
   "engines": {
     "node": ">=0.10.0"

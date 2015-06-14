@@ -8,6 +8,8 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
+    //require('grunt-tslint')(grunt);
+
     // Configurable paths for the application
     var appConfig = {
         app: require('./bower.json').appPath || 'app',
@@ -400,6 +402,16 @@ module.exports = function (grunt) {
             }
         },
 
+        // Make sure code styles are up to par (for Typescript files)
+        tslint: {
+            options: {
+                configuration: grunt.file.readJSON('tslint.json')
+            },
+            files: {
+                src: ['<%= yeoman.app %>/modules/**/*.ts', '<%= yeoman.app %>/*.ts']
+            }
+        },
+
         ts: {
             server: {
                 src: ['<%= yeoman.app %>/*.ts', '<%= yeoman.app %>/modules/**/*.ts'],
@@ -479,6 +491,7 @@ module.exports = function (grunt) {
         'compass',
         'autoprefixer',
         'connect:test',
+        'tslint',
         'karma'
     ]);
 
