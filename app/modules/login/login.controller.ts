@@ -3,14 +3,17 @@
 
 class LoginController {
     private $state: angular.ui.IStateService;
+    private $scope; //@todo: add type, angular.IScope ?
 
-    constructor($state) {
+    constructor($state, $scope) {
         'ngInject';
         this.$state = $state;
+        this.$scope = $scope;
     }
 
     login() {
-        //nothing
+        console.debug('in login');
+        this.$scope.nick2 = this.$scope.nick || '-';
     }
 }
 

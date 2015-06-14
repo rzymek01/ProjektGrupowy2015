@@ -1,3 +1,4 @@
 Enter room id: <input type="text"><br />
-Enter your nick: <input type="text"><br />
-<button ng-click="loginController.method()">Login</button>
+Enter your nick: <input type="text" ng-model="nick"><br />
+<button ng-click="loginController.login()">Login</button>
+<div ng-bind="nick2"></div>
