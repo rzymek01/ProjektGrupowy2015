@@ -21,10 +21,4 @@ describe('Controller: LoginController', () => {
     it('should have login method', () => {
         expect(loginController.login).toEqual(jasmine.any(Function));
     });
-    it('check login method', () => {
-        var someNick = 'test';
-        loginController.$scope.nick = someNick;
-        loginController.login();
-        expect(loginController.$scope.nick2).toEqual(someNick);
-    });
 });

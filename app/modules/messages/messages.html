@@ -1,0 +1,4 @@
+<div ng-repeat="message in messagesController.messages track by message.id">
+    <button pgr-copy-button text-to-copy="::message.text">Copy to clipboard</button>
+    <span>{{::message.text}}</span>
+</div>
