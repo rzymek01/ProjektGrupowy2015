@@ -8,11 +8,15 @@ import constants from './constants';
 
 //application modules
 import './modules/login/login.module';
+import './modules/messages/messages.module';
+import './modules/copyButton/copyButton.module';
 
 //bootstrap the modules
 angular.module('PGR2015', [
         'PGR2015.core',
-        'PGR2015.login'
+        'PGR2015.login',
+        'PGR2015.messages',
+        'PGR2015.copyButton'
     ])
     .config(appConfigPhase)
     .config(appRoutesConfig)
