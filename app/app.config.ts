@@ -1,6 +1,3 @@
-///<reference path="../typings/tsd.d.ts" />
-'use strict';
-
 export function appConfigPhase($locationProvider: angular.ILocationProvider, $compileProvider: angular.ICompileProvider,
                 $httpProvider: angular.IHttpProvider, DEBUG: boolean) {
     $locationProvider.html5Mode(true).hashPrefix('!');

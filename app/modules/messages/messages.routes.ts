@@ -1,7 +1,4 @@
-///<reference path="../../../typings/tsd.d.ts" />
-'use strict';
-
-function MessagesConfig($stateProvider: angular.ui.IStateProvider) {
+export default function MessagesRoutesConfig($stateProvider:angular.ui.IStateProvider) {
     $stateProvider
         .state('app.messages', {
             url: 'messages/',
@@ -13,5 +10,3 @@ function MessagesConfig($stateProvider: angular.ui.IStateProvider) {
             }
         });
 }
-
-export default MessagesConfig;

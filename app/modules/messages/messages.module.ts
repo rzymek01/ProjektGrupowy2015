@@ -1,6 +1,3 @@
-///<reference path="../../../typings/tsd.d.ts" />
-'use strict';
-
 import MessagesConfig from './messages.routes';
 import MessagesController from './messages.controller';
 

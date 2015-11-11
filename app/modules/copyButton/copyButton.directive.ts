@@ -1,20 +1,18 @@
-///<reference path="../../../typings/tsd.d.ts" />
-'use strict';
+import IAugmentedJQuery = angular.IAugmentedJQuery;
+import IScope = angular.IScope;
 
-function CopyButtonDirective($window) {
+export default function CopyButtonDirective($window) {
     const CopyButton = $window.CopyButton;
     return {
         restrict: 'A',
         scope: {
             textToCopy: '='
         },
-        link(scope: angular.IScope, element) {
+        link(scope: IScope, element: IAugmentedJQuery) {
             const copyButton = new CopyButton(element[0]);
-            scope.$watch('textToCopy', (newVal, oldVal) => {
+            scope.$watch('textToCopy', newVal => {
                 copyButton.setCopyData(newVal);
             });
         }
-    }
+    };
 }
-
-export default CopyButtonDirective;

@@ -18,15 +18,11 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'bower_components/core.js/client/core.js',
-            'bower_components/angular/angular.js',
-            'bower_components/angular-ui-router/release/angular-ui-router.js',
-            'bower_components/requirejs/require.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            { pattern: 'app/modules/**/*.module.ts',  included: false },
-            { pattern: 'app/modules/**/*.routes.ts',  included: false },
-            { pattern: 'app/modules/**/*.ts',  included: false },
-            { pattern: 'test/routes-mock.ts',  included: false },
+            //bower:js
+            //endbower
+            'app/modules/**/*.module.ts',
+            'app/modules/**/*.routes.ts',
+            'app/modules/**/*.ts',
             'test/*.ts'
         ],
 
@@ -55,7 +51,8 @@ module.exports = function(config) {
         plugins: [
             'karma-phantomjs-launcher',
             'karma-jasmine',
-            'karma-typescript-preprocessor'
+            'karma-typescript-preprocessor',
+            'karma-webpack'
         ],
 
         preprocessors: {

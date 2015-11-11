@@ -1,6 +1,3 @@
-///<reference path="../../../typings/tsd.d.ts" />
-'use strict';
-
 import LoginController from './login.controller';
 
 describe('Controller: LoginController', () => {

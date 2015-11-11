@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- build:[ng-strict-di]:dist ng-strict-di-->
-<html dir="ltr" lang="en-US" class="no-js">
+<html dir="ltr" lang="en-US" class="no-js" ng-app="PGR2015">
 <!-- /build -->
 <head>
     <meta charset="utf-8">
@@ -10,33 +10,20 @@
 
     <base href="/">
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
 
     <!-- build:js(.) scripts/vendor.js -->
-    <script src="bower_components/core.js/client/core.js"></script>
-    <script src="bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
-    <script>
-        ZeroClipboard.config( { swfPath: 'bower_components/zeroclipboard/dist/ZeroClipboard.swf', flashLoadTimeout: 3000 } );
-    </script>
     <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/requirejs/require.js"></script>
     <!-- endbower -->
-    <!-- todo add proper meta, so that wiredep can inject this script automatically -->
-    <script src="bower_components/CopyButton/dist/copyButton.js"></script>
+    <script>
+        ZeroClipboard.config( { swfPath: 'components/zeroclipboard/dist/ZeroClipboard.swf', flashLoadTimeout: 3000 } );
+    </script>
     <!-- endbuild -->
 
     <!-- build:js(.) scripts/scripts.js -->
-    <!-- injector:js -->
-    <!-- endinjector -->
-    <script>
-        require(['app.module'], function () {
-            //this will kick off the application
-        });
-    </script>
+    <!-- inject:js -->
+    <!-- endinject -->
     <!-- endbuild -->
 </head>
 <body>

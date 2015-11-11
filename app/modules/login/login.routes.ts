@@ -1,7 +1,4 @@
-///<reference path="../../../typings/tsd.d.ts" />
-'use strict';
-
-function LoginConfig($stateProvider: angular.ui.IStateProvider) {
+export default function LoginRoutesConfig($stateProvider:angular.ui.IStateProvider) {
     $stateProvider
         .state('app.login', {
             url: '',
@@ -13,5 +10,3 @@ function LoginConfig($stateProvider: angular.ui.IStateProvider) {
             }
         });
 }
-
-export default LoginConfig;
