@@ -1,6 +1,3 @@
-///<reference path="../typings/tsd.d.ts" />
-'use strict';
-
 function appRoutesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider) {
     //https://github.com/angular-ui/ui-router/issues/600
     $urlRouterProvider.otherwise(($injector: angular.auto.IInjectorService) => {

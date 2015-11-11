@@ -1,11 +1,7 @@
-///<reference path="../../../typings/tsd.d.ts" />
-'use strict';
-
-class LoginController {
+export default class LoginController {
     private $state: angular.ui.IStateService;
 
-    constructor($state) {
-        'ngInject';
+    constructor($state: angular.ui.IStateService) {
         this.$state = $state;
     }
 
@@ -13,5 +9,3 @@ class LoginController {
         this.$state.go('app.messages');
     }
 }
-
-export default LoginController;

@@ -2,6 +2,7 @@ node_modules
 .tmp
 .sass-cache
 bower_components
+app/components
 .idea
 .baseDir.ts
 .tscache

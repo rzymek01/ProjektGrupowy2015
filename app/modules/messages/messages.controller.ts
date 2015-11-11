@@ -1,7 +1,4 @@
-///<reference path="../../../typings/tsd.d.ts" />
-'use strict';
-
-function MessagesController() {
+export default function MessagesController() {
     this.messages = [
         {
             id: 0,
@@ -13,5 +10,3 @@ function MessagesController() {
         }
     ];
 }
-
-export default MessagesController;

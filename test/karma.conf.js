@@ -18,22 +18,19 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'bower_components/core.js/client/core.js',
-            'bower_components/angular/angular.js',
-            'bower_components/angular-ui-router/release/angular-ui-router.js',
-            'bower_components/requirejs/require.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            { pattern: 'app/modules/**/*.module.ts',  included: false },
-            { pattern: 'app/modules/**/*.routes.ts',  included: false },
-            { pattern: 'app/modules/**/*.ts',  included: false },
-            { pattern: 'test/routes-mock.ts',  included: false },
-            'test/*.ts'
+            //bower:js
+            'app/components/angular/angular.js',
+            'app/components/angular-ui-router/release/angular-ui-router.js',
+            'app/components/core.js/client/core.js',
+            'app/components/zeroclipboard/dist/ZeroClipboard.js',
+            'app/components/CopyButton/dist/copyButton.js',
+            'app/components/angular-mocks/angular-mocks.js',
+            //endbower
+            'test/tests.bundle.js'
         ],
 
         // list of files / patterns to exclude
         exclude: [
-            //some garbage files added by typescript preprocessor
-            '**/*.ktp.ts'
         ],
 
         // web server port
@@ -55,22 +52,31 @@ module.exports = function(config) {
         plugins: [
             'karma-phantomjs-launcher',
             'karma-jasmine',
-            'karma-typescript-preprocessor'
+            'karma-webpack'
         ],
 
         preprocessors: {
-            '**/*.ts': ['typescript']
+            'test/tests.bundle.js': ['webpack']
         },
 
-        typescriptPreprocessor: {
-            // options passed to the typescript compiler
-            options: {
-                target: 'es5',
-                sourceMap: true,
-                sourceRoot: '/',
-                comments: true,
-                module: 'amd'
-            }
+        //TODO: add single webpack config
+        webpack: {
+            module: {
+                loaders: [
+                    {test: /\.ts$/, loader: 'babel!ts'}
+                ]
+            },
+            resolve: {
+                extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+            },
+            output: {
+                filename: 'tests.js'
+            },
+            devtool: 'inline-source-map'
+        },
+
+        webpackMiddleware: {
+            noInfo: true
         },
 
         typings: [
