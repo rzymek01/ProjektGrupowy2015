@@ -4,7 +4,8 @@ describe('Controller: LoginController', () => {
     //you should never test controllers, dude. That's only an example.
     //if you need to test a controller, consider writing a service.
 
-    beforeEach(module('PGR2015.login'));
+    beforeEach(angular.mock.module('PGR2015.core'));
+    beforeEach(angular.mock.module('PGR2015.login'));
 
     let loginController: LoginController;
 

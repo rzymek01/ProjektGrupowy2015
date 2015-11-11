@@ -6,7 +6,8 @@ const browserSync = require('browser-sync').create('PGR2015'),
     clean = require('./gulp_tasks/clean'),
     html = require('./gulp_tasks/html'),
     scss = require('./gulp_tasks/scss'),
-    build = require('./gulp_tasks/build');
+    build = require('./gulp_tasks/build'),
+    test = require('./gulp_tasks/test');
 
 gulp.task('clean:serve', clean);
 
@@ -22,3 +23,7 @@ gulp.task('scss:serve', ['clean:serve'], scss);
 gulp.task('scss-watch:serve', scss);
 
 gulp.task('build', html);
+
+gulp.task('test-inject', test.inject);
+gulp.task('test-run', ['test-inject'], test.run);
+gulp.task('test', ['test-run']);
