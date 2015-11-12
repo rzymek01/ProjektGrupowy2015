@@ -1,0 +1,35 @@
+{
+  "name": "ProjektGrupowy2015Demo",
+  "version": "0.0.0",
+  "repository": {},
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "browser-sync": "^2.9.3",
+    "connect-modrewrite": "^0.8.2",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^6.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.2",
+    "gulp-usemin": "^0.3.15",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.15",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-typescript-preprocessor": "0.0.21",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^1.9.18",
+    "ts-loader": "^0.5.5",
+    "typescript": "^1.6.2",
+    "webpack-stream": "^2.1.1",
+    "wiredep": "^2.2.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

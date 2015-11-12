@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- build:[ng-strict-di]:dist ng-strict-di-->
+<html dir="ltr" lang="en-US" class="no-js" ng-app="PGR2015">
+<!-- /build -->
+<head>
+    <meta charset="utf-8">
+    <title>Projekt Grupowy 2015 - aplikacja demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <base href="/">
+    <!-- build:css(.tmp) styles/main.css -->
+    <!--<link rel="stylesheet" href="styles/style.css">-->
+    <!-- endbuild -->
+
+    <!-- build:js(app/) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <script>
+        ZeroClipboard.config( { swfPath: 'components/zeroclipboard/dist/ZeroClipboard.swf', flashLoadTimeout: 3000 } );
+    </script>
+    <!-- endbuild -->
+
+    <!-- inject:js -->
+    <!-- endinject -->
+</head>
+<body>
+    <main ui-view="content" autoscroll="true"></main>
+</body>
+</html>

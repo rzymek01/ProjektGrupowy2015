@@ -1,0 +1,24 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "tsc-1.5.0-alpha",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "angularjs/angular.d.ts": {
+      "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+    },
+    "angular-ui-router/angular-ui-router.d.ts": {
+      "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+    },
+    "angularjs/angular-mocks.d.ts": {
+      "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+    }
+  }
+}

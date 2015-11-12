@@ -1,0 +1,16 @@
+node_modules
+.tmp
+.sass-cache
+bower_components
+app/components
+.idea
+.baseDir.ts
+.tscache
+dist
+typings
+tscommand*.tmp.txt
+app/*.js
+app/*.js.map
+app/modules/**/*.js
+app/modules/**/*.js.map
+app/modules/**/*.ktp.ts
