@@ -7,6 +7,11 @@ export default function MessagesController() {
         {
             id: 1,
             text: 'Another message'
+        },
+        {
+            id: 2,
+            text: 'Yet message'
         }
+
     ];
 }

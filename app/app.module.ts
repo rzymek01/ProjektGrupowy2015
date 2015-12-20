@@ -8,6 +8,7 @@ angular.module('PGR2015', [
         'PGR2015.core',
         'PGR2015.login',
         'PGR2015.messages',
+        'PGR2015.printing',
         'PGR2015.copyButton'
     ])
     .config(appConfigPhase)
@@ -26,4 +27,5 @@ constants.forEach((value, name) => constantsModule.constant(name, value));
 //application modules
 import './modules/login/login.module';
 import './modules/messages/messages.module';
+import './modules/printing/printing.module';
 import './modules/copyButton/copyButton.module';
