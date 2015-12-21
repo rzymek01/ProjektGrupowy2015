@@ -1,2 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    main[ui-view] {
+        height: 100%;
+    }
+}
+
+@import "../modules/messages/messages";
 @import "printing.engine.scss";
 @import "printing.default.style";
+

@@ -1,4 +1,19 @@
-<div ng-repeat="message in messagesController.messages track by message.id">
-    <button pgr-copy-button text-to-copy="::message.text">Copy to clipboard</button>
-    <span>{{::message.text}}</span>
+<div class="messages">
+    <div class="messages__content">
+        <div ng-if="messagesController.loading" class="content__loading">
+            Loading messages...
+        </div>
+        <div ng-if="!messagesController.loading" class="content__loaded">
+            <span ng-if="messagesController.messages.length === 0">No messages in this conversation.</span>
+            <div ng-repeat="message in messagesController.messages track by message.$id">
+                <button pgr-copy-button text-to-copy="::message.text">Copy</button>
+                <span><b>{{::message.author}}:</b> {{::message.text}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="messages__input">
+        <input type="text" ng-model="messagesController.message" required
+               placeholder="Type your message here (ENTER to send)"
+               ng-keydown="messagesController.inputKeydown($event)" class="input__newmessage"/>
+    </div>
 </div>

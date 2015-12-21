@@ -4,7 +4,8 @@ const gulp = require('gulp'),
     webpack = require('webpack-stream'),
     usemin = require('gulp-usemin'),
     uglify = require('gulp-uglify'),
-    rev = require('gulp-rev');
+    rev = require('gulp-rev'),
+    sass = require('gulp-sass');
 
 module.exports = {
     vendor: function () {
@@ -46,6 +47,11 @@ module.exports = {
             .pipe(usemin({
                 js: [uglify(), rev()]
             }))
+            .pipe(gulp.dest('dist'));
+    },
+    styles: function () {
+        return gulp.src(['app/styles/*.scss'])
+            .pipe(sass().on('error', sass.logError))
             .pipe(gulp.dest('dist'));
     }
 };
