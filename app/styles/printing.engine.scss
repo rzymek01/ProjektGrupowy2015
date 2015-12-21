@@ -1,0 +1,65 @@
+$pageWidth: 210mm;
+$pageHeight: 297mm;
+$marginTop: 1.4cm;
+$marginLeft: 1cm;
+$marginRight: 1cm;
+$marginBottom: 1cm;
+@mixin page() {
+  width: $pageWidth;
+  height: $pageHeight;
+  display: block;
+  border: #dedede;
+  border-radius: 3px;
+  box-shadow: 0px 3px 7px #aaaaaa;
+  margin: 6mm auto;
+  position: relative;
+
+  &:first-child {
+    margin-top: 12mm;
+
+  }
+}
+
+@mixin page-flow() {
+  -webkit-flow-from: main-flow;
+  width: $pageWidth - $marginLeft - $marginRight;
+  height: $pageHeight - $marginTop - $marginBottom;
+  position: absolute;
+  top: $marginTop;
+  left: $marginLeft;
+
+}
+
+@mixin page-header() {
+  position: absolute;
+  width: 100%;
+  height: $marginTop;
+}
+
+@mixin page-footer() {
+  position: absolute;
+  width: $pageWidth;
+  height: $marginBottom;
+  bottom: 0;
+}
+
+#a-printing-page-source {
+  -webkit-flow-into: main-flow;
+}
+
+.a-printing-root {
+  .a-printing-pages {
+    .a-printing-page {
+      @include page();
+      .a-printing-page-flow {
+        @include page-flow();
+      }
+      .a-printing-page-header {
+        @include page-header();
+      }
+      .a-printing-page-footer {
+        @include page-footer();
+      }
+    }
+  }
+}

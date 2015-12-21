@@ -1,4 +1,17 @@
-<div ng-repeat="message in printingController.messages track by message.id">
-    <button pgr-copy-button text-to-copy="::message.text">Copy to clipboard</button>
-    <span>{{::message.text}}</span>
+<div id="a-printing-page-source" ng-bind-html="printingController.flow">
+</div>
+<div class="a-printing-root">
+    <div class="a-printing-pages">
+        <div class="a-printing-page" ng-repeat="page in printingController.pages">
+            <div class="a-printing-page-header">
+                <div class="a-printing-page-header-content" ng-bind-html="page.header">
+                </div>
+            </div>
+            <div class="a-printing-page-flow"></div>
+            <div class="a-printing-page-footer">
+                <div class="a-printing-page-footer-content" ng-bind-html="page.footer">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
