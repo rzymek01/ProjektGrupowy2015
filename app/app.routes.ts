@@ -1,7 +1,7 @@
 function appRoutesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider) {
     //https://github.com/angular-ui/ui-router/issues/600
     $urlRouterProvider.otherwise(($injector: angular.auto.IInjectorService) => {
-        var $state: angular.ui.IStateService = $injector.get('$state');
+        var $state: angular.ui.IStateService = $injector.get<angular.ui.IStateService>('$state');
         $state.go('app.login');
     });
 
