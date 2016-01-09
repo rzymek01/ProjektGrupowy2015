@@ -24,6 +24,8 @@ module.exports = function(config) {
             'app/components/core.js/client/core.js',
             'app/components/zeroclipboard/dist/ZeroClipboard.js',
             'app/components/CopyButton/dist/copyButton.js',
+            'app/components/firebase/firebase.js',
+            'app/components/angularfire/dist/angularfire.js',
             'app/components/angular-mocks/angular-mocks.js',
             //endbower
             'test/tests.bundle.js'
