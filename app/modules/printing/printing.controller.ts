@@ -1,4 +1,4 @@
-import {Parser} from "./engine/Parser";
+import {Parser} from "./engine/parser";
 export default function PrintingController($sce, $interpolate) {
 
     var parser:Parser = new Parser();
