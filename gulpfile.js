@@ -1,7 +1,9 @@
 const gulp = require('gulp');
 
-const browserSync = require('browser-sync').create('PGR2015'),
-    serve = require('./gulp_tasks/serve'),
+const browserSync = require('browser-sync');
+browserSync.create('PGR2015');
+
+const serve = require('./gulp_tasks/serve'),
     ts = require('./gulp_tasks/ts'),
     clean = require('./gulp_tasks/clean'),
     html = require('./gulp_tasks/html'),
