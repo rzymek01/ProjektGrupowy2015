@@ -13,6 +13,7 @@ $marginBottom: 1cm;
   box-shadow: 0px 3px 7px #aaaaaa;
   margin: 6mm auto;
   position: relative;
+  overflow: hidden;
 
   &:first-child {
     margin-top: 12mm;
@@ -32,7 +33,7 @@ $marginBottom: 1cm;
 
 @mixin page-header() {
   position: absolute;
-  width: 100%;
+  width: $pageWidth;
   height: $marginTop;
 }
 
@@ -59,6 +60,49 @@ $marginBottom: 1cm;
       }
       .a-printing-page-footer {
         @include page-footer();
+      }
+    }
+  }
+}
+
+#__bs_notify__ {
+  display: none !important;
+}
+
+@media print {
+  @page {
+    margin: 0 !important;
+  }
+  html {
+    //background: red;
+    margin: 0 !important;
+  }
+  body {
+    margin: 0 !important;
+  }
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .a-printing-root {
+    margin: 0 !important;
+    .a-printing-pages {
+      margin: 0 !important;
+      .a-printing-page {
+        page-break-inside: avoid;
+        //background: pink;
+        margin: 0 !important;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        overflow: hidden;
+        .a-printing-page-header{
+          //background: #46c;
+        }
+        .a-printing-page-footer{
+          //background: yellow;
+        }
+        
       }
     }
   }

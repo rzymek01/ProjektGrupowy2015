@@ -3,7 +3,7 @@ export default function PrintingController($sce, $interpolate) {
 
     var parser:Parser = new Parser();
     var content = parser.getContent();
-    var pageCount = 5; //todo calculate page count iteratively
+    var pageCount = 4; //todo calculate page count iteratively
     var pages = this.pages = [];
 
     var footer = $interpolate(content['footer'])

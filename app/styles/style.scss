@@ -1,2 +1,10 @@
 @import "printing.engine.scss";
+@import "printing.print-preview.scss";
 @import "printing.default.style";
+
+table {
+  border-collapse: collapse;
+  td {
+    padding: 3mm;
+  }
+}
