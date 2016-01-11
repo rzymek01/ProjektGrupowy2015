@@ -16,9 +16,10 @@ angular.module('PGR2015', [
     .run(appRunPhase);
 
 angular.module('PGR2015.core', [
-        'PGR2015.constants',
-        'ui.router'
-    ]);
+    'PGR2015.constants',
+    'ui.router',
+    'firebase'
+]);
 
 //add constants
 const constantsModule = angular.module('PGR2015.constants', []);

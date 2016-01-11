@@ -1,11 +1,14 @@
 export default class LoginController {
-    private $state: angular.ui.IStateService;
+    private roomId: string;
+    private name: string;
 
-    constructor($state: angular.ui.IStateService) {
-        this.$state = $state;
+    constructor(private $state: angular.ui.IStateService) {
     }
 
     login() {
-        this.$state.go('app.messages');
+        this.$state.go('app.messages', {
+            roomId: this.roomId,
+            name: this.name
+        });
     }
 }

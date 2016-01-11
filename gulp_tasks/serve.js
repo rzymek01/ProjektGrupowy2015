@@ -14,7 +14,8 @@ module.exports = function () {
                 ])
             ]
         },
-        open: false
+        open: false,
+        https: true
     });
 
     gulp.src('app/components/**/*').pipe(gulp.dest('.tmp/components'));

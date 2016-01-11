@@ -6,10 +6,10 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "angularjs/angular.d.ts": {
-      "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "jquery/jquery.d.ts": {
-      "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "angular-ui-router/angular-ui-router.d.ts": {
       "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
@@ -19,6 +19,12 @@
     },
     "jasmine/jasmine.d.ts": {
       "commit": "4408b656fab59a4e7f871da2f492311eedc9bdcd"
+    },
+    "firebase/firebase.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+    },
+    "angularfire/angularfire.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     }
   }
 }
